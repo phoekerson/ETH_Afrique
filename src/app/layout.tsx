@@ -29,15 +29,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
+    <html lang="fr" suppressHydrationWarning>
       <body
         className={`${poppins.className} bg-[#06286F]`}
+        suppressHydrationWarning
       >
         <ThemeProvider
-        attribute='class'
-        defaultTheme="dark"
-        enableSystem={false}
-        disableTransitionOnChange
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+          storageKey="ethafrique-theme"
         >
           <Navbar />
           <main>{children}</main> 
