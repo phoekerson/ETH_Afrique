@@ -1,14 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Nouvelle palette de couleurs inspirée d'Ethereum */
+  --eth-primary: #1c1ce1;
+  --eth-secondary: #00ffd0;
+  --eth-dark: #0a1930;
+  --eth-light: #ecf0ff;
+  --eth-accent: #ff7eb3;
+  
+  /* Variables de base */
+  --background: var(--eth-dark);
+  --foreground: var(--eth-light);
+  
+  /* Effets spéciaux */
+  --glow: 0 0 10px var(--eth-secondary);
+  --gradient-primary: linear-gradient(135deg, var(--eth-primary) 0%, var(--eth-secondary) 100%);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Space Grotesk', var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -20,7 +32,66 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--eth-dark);
+  color: var(--eth-light);
+  font-family: 'Space Grotesk', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Animations personnalisées */
+@keyframes glow {
+  0% { box-shadow: 0 0 5px var(--eth-secondary); }
+  50% { box-shadow: 0 0 20px var(--eth-secondary); }
+  100% { box-shadow: 0 0 5px var(--eth-secondary); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Classes utilitaires */
+.eth-gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.eth-glow {
+  animation: glow 3s infinite;
+}
+
+.eth-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Styles pour les sections */
+.section-gradient {
+  background: linear-gradient(180deg, var(--eth-dark) 0%, rgba(28, 28, 225, 0.1) 100%);
+}
+
+/* Styles pour les cartes et conteneurs */
+.eth-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+/* Styles pour les boutons */
+.eth-button {
+  background: var(--gradient-primary);
+  color: var(--eth-light);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.eth-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow);
 }
