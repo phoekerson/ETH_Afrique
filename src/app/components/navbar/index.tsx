@@ -82,15 +82,17 @@ const Navbar = () => {
 
           {/* Desktop Reserve Button */}
           <div className="hidden md:block">
-            <Button
-              className={cn(
-                'bg-gradient-to-br from-[#2BF7D5] to-[#0D3DA3] text-black px-6 py-2 rounded-lg cursor-pointer font-bold flex items-center gap-2 shadow-lg',
-                'hover:from-[#0D3DA3] hover:to-[#2BF7D5] hover:text-white hover:scale-105 transition-all duration-300'
-              )}
-            >
-              <Ticket className="w-5 h-5 mr-1" />
-              Réserver mon billet
-            </Button>
+          <a href="https://lu.ma/jduoajcx?tk=OaWrmK" target="_blank">
+              <Button
+                className={cn(
+                  'bg-gradient-to-br from-[#2BF7D5] to-[#0D3DA3] text-black px-6 py-2 rounded-lg cursor-pointer font-bold flex items-center gap-2 shadow-lg',
+                  'hover:from-[#0D3DA3] hover:to-[#2BF7D5] hover:text-white hover:scale-105 transition-all duration-300'
+                )}
+              >
+                <Ticket className="w-5 h-5 mr-1" />
+                Réserver mon billet
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

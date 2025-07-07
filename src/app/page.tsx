@@ -344,6 +344,7 @@ export default function Home() {
               S'inscrire maintenant
             </Button>
             </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWlLfuaay_SxjyHNiJNepxqcGdPC3TvlvOFrzSVuiDj_Q7UQ/viewform" target="_blank">
             <Button
               variant="outline"
               className="eth-button-outline"
@@ -354,6 +355,7 @@ export default function Home() {
             >
               Devenir Sponsor
             </Button>
+            </a>
           </div>
 
           {/* Stats */}
@@ -449,6 +451,7 @@ export default function Home() {
           ))}
         </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center my-5">
+        <a href="https://lu.ma/jduoajcx?tk=OaWrmK" target="_blank">
           <Button
             className={cn(
               "bg-[#2bf7d5] font-bold shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300",
@@ -457,6 +460,9 @@ export default function Home() {
           >
             S'inscrire
           </Button>
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWlLfuaay_SxjyHNiJNepxqcGdPC3TvlvOFrzSVuiDj_Q7UQ/viewform" target="_blank">
+
           <Button
             variant="outline"
             className={cn(
@@ -466,6 +472,7 @@ export default function Home() {
           >
             Devenir Sponsor
           </Button>
+        </a>
         </div>
       </section>
 
