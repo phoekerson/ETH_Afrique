@@ -153,39 +153,67 @@ export default function Home() {
       image: "/images/santiago_lisk.png",
     },
     {
-      name: "Sarah Wilson",
+      name: "Aoudou D. Bouraima",
       role: "Web3 Architect",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: "/images/speaker-image.png",
+      image: "/images/Bouraima A.png",
     },
     {
-      name: "Michael Brown",
+      name: "Rozales",
       role: "NFT Specialist",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800",
+        "/images/Rozales.png",
     },
     {
-      name: "Emily Davis",
+      name: "Mady Dia",
       role: "Ethereum Researcher",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800",
+        "/images/Mady_Dia.png",
     },
     {
-      name: "David Miller",
+      name: "Souleymane Ouatara",
       role: "Protocol Developer",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800",
+        "/images/Souleymane.png",
     },
     {
-      name: "Lisa Anderson",
+      name: "Duclair",
       role: "Security Expert",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       image:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800",
+        "/images/Duclair.png",
     },
+    {
+      name: "Gedeon LALEMI",
+      role: "Security Expert",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      image:
+        "/images/Gedeon.png",
+    },
+    {
+      name: "Guy DOSSEY",
+      role: "Security Expert",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      image:
+        "/images/Guy.png",
+    },
+    {
+      name: "Hermann Eho",
+      role: "Security Expert",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      image:
+        "/images/hermann Eho.png",
+    },
+    {
+      name: "Abdias",
+      role: "Security Expert",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      image:
+        "/images/Abdias.png",
+    }
   ];
 
   const speakersPerPage = 4;
@@ -236,7 +264,7 @@ export default function Home() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "95b40327-14b0-4c6b-a509-b65d2dc8faa4", // Remplacez par votre clé d'accès Web3Forms
+          access_key: "95b40327-14b0-4c6b-a509-b65d2dc8faa4", 
           name: formData.get('name'),
           email: formData.get('email'),
           message: formData.get('message'),
@@ -305,6 +333,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <a href="https://lu.ma/jduoajcx?tk=OaWrmK" target="_blank">
             <Button
               className="eth-button"
               onClick={() => {
@@ -314,6 +343,7 @@ export default function Home() {
             >
               S'inscrire maintenant
             </Button>
+            </a>
             <Button
               variant="outline"
               className="eth-button-outline"
